@@ -1,21 +1,5 @@
 # Wordle
 
-## Important Update:
-Based on questions in the last couple of days, it is clear that handling duplicate letters in the solution and in the guesses is more challenging that we originally realized.  To simplify the constraints, we are going to make the following change to the specifications:  the solution word will not contain any duplicate letters, and guesses may not contain duplicate solution word letters. 
-
-For example, if the solution word is "light" and the row one is "gg--g" then "licit" is not a valid guess because it contains two i's, and the cannot_be set will be "g h i l t".  This means that the input1 example has no valid paths.
-
-Note that we can still accept words that contain other duplicate letters as valid guesses.  For example, if the solution word is "perky" then a valid guess given "-yy---" could be "tress".  Since 's' is not a solution letter, it is fine for it to be duplicated.
-
-If you have already implemented a solution that handles duplicate paths you do not need to change it.  Please document it clearly so that the TAs can see the design decisions that you made. 
-
-Example input files and the corresponding list of paths are in samples.zip Download samples.zip  For the input file named "inputX", the corresponding list of paths is in a file called "inputX.out".  Note that the order of printing the paths in your solution could be different than in the example output.  Because the input in "input1" does not produce any valid paths, the file "input1.out" is empty.
-
-Also note that the TAs will be focusing their grading on building and traversing the tree rather than the constraints.
-
-## Update: 
-Some of the example pdfs have been updated to fix typos.  The only significant change is illustrated in a new example: largo-example.pdf Download largo-example.pdf  You may also find this example useful because it has yellow tiles in the row closest to the solution and has a very small tree.
-
 ## Introduction
 We just couldn't resist creating an assignment around wordle Links to an external site., the word game that has caught the attention of the world.  Please read the rules for wordle in the app, and try playing a couple of times if you haven't already.
 
@@ -87,3 +71,19 @@ Prints all the the paths from the root to the leaves that have length equal to t
 * Please add any additional helper functions to the appropriate source code file.  There isn't very much code to write for this assignment, so you are unlikely to need many helper functions.
 ## Submission
 Commit all code required to compile and run your program.  You are welcome to include other C source files that you use for testing.  Do not include executable files, or any other auto-generated files. 
+
+## Important Update:
+Based on questions in the last couple of days, it is clear that handling duplicate letters in the solution and in the guesses is more challenging that we originally realized.  To simplify the constraints, we are going to make the following change to the specifications:  the solution word will not contain any duplicate letters, and guesses may not contain duplicate solution word letters. 
+
+For example, if the solution word is "light" and the row one is "gg--g" then "licit" is not a valid guess because it contains two i's, and the cannot_be set will be "g h i l t".  This means that the input1 example has no valid paths.
+
+Note that we can still accept words that contain other duplicate letters as valid guesses.  For example, if the solution word is "perky" then a valid guess given "-yy---" could be "tress".  Since 's' is not a solution letter, it is fine for it to be duplicated.
+
+If you have already implemented a solution that handles duplicate paths you do not need to change it.  Please document it clearly so that the TAs can see the design decisions that you made. 
+
+Example input files and the corresponding list of paths are in samples.zip Download samples.zip  For the input file named "inputX", the corresponding list of paths is in a file called "inputX.out".  Note that the order of printing the paths in your solution could be different than in the example output.  Because the input in "input1" does not produce any valid paths, the file "input1.out" is empty.
+
+Also note that the TAs will be focusing their grading on building and traversing the tree rather than the constraints.
+
+## Update: 
+Some of the example pdfs have been updated to fix typos.  The only significant change is illustrated in a new example: largo-example.pdf Download largo-example.pdf  You may also find this example useful because it has yellow tiles in the row closest to the solution and has a very small tree.
